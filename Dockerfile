@@ -8,14 +8,14 @@ RUN apt-get update && apt-get install -y \
     libxi6 \
     libx11-6 \
     libxext6 \
-    librender1 \
+    libxrender1 \
     && rm -rf /var/lib/apt/lists/*
 
 # 3. Menentukan lokasi direktori kerja utama
 WORKDIR /app
 
 # 4. Menyalin seluruh isi build server ke dalam folder /app
-COPY ./linux-server-build /app
+COPY . /app
 
 # 5. Memberikan izin eksekusi pada binary game server
 RUN chmod +x /app/ummorpg.x86_64
