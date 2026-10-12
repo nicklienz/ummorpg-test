@@ -9,6 +9,8 @@ RUN apt-get update && apt-get install -y \
     libx11-6 \
     libxext6 \
     libxrender1 \
+    libsqlite3-0 \
+    sqlite3 \    
     && rm -rf /var/lib/apt/lists/*
 
 # 3. Menentukan lokasi direktori kerja utama
